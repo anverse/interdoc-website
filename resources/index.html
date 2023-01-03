@@ -2,11 +2,180 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>InterDoc</title>
+    <meta name="description" content="Provides the missing link between code and documentation." />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>InterDoc</title>
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira%20Code:wght@300..700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="main.css" />
+    <meta name="theme-color" content="#222129" />
   </head>
-  <body>
-    <h1>InterDoc</h1>
+  <body
+    class="mx-auto max-w-4xl p-5 font-sans prose-ul:list-none dark:border-x dark:border-x-white/[.1] dark:bg-[#222129] dark:text-white md:p-10"
+  >
+    <!--    <header class="pb-5 md:pb-10">-->
+    <!--      <div class="raster flex">-->
+    <!--        <a-->
+    <!--          href="index.html"-->
+    <!--          class="flex items-center bg-orange-300 py-1.5 px-2.5 text-black no-underline"-->
+    <!--          >InterDoc</a-->
+    <!--        >-->
+    <!--      </div>-->
+    <!--    </header>-->
+
+    <div class="flex flex-col items-center">
+      <img
+        src="assets/demo.png"
+        alt="editor shows a code comment with clickable markdown links"
+        class="mx-auto mb-10 w-96"
+      />
+      <h1 class="mb-4 text-center text-3xl font-bold text-neutral-300">
+        [[<span class="text-blue-400">InterDoc</span>]]
+      </h1>
+      <h2
+        class="mb-10 w-fit border-b-4 border-dotted border-orange-300 pb-0.5 text-center text-2xl after:bottom-0.5 after:mt-3 after:block after:w-full after:border-b-4 after:border-dotted after:border-orange-300"
+      >
+        Making documentation accessible
+      </h2>
+    </div>
+
+    <section class="prose prose-neutral max-w-full dark:prose-invert">
+      <details>
+        <summary class="cursor-pointer">Why you should try to avoid code comments as much as possible</summary>
+        <p class="mt-2">
+          Code Comments can be used to explain the purpose of a piece of code, or to provide additional context or
+          information about how it works. While comments can help explain the intent of a piece of code, they can also
+          become outdated or misleading if they are not kept up-to-date with the code. In addition, comments do not add
+          any value to the actual functioning of the code, and can even make the code harder to read if they are
+          excessively used or are not written clearly.
+        </p>
+        <p>
+          Therefore, it is generally a good idea to try to avoid using comments as much as possible and to rely on
+          well-named variables, functions, and clear code structure to convey the purpose and functionality of the code.
+        </p>
+        <p>
+          However, there are situations where comments can be useful and can help make the code easier to understand.
+          For example, comments can be used to provide explanations for particularly complex or subtle pieces of code or
+          to provide context for why a certain design decision was made.
+        </p>
+        <p>
+          In general, it is best to use comments sparingly and to focus on writing clear, self-explanatory code. When
+          comments are necessary, they should be written in a way that is concise, accurate, and easy to understand.
+        </p>
+      </details>
+
+      <details>
+        <summary class="mt-5 cursor-pointer">Where documentation makes sense</summary>
+        <p class="mt-2">
+          There are many things that we cannot see just by reading the code, and in these cases, documentation is often
+          necessary to provide a full understanding of the code's purpose and functionality. It's important to recognize
+          the importance of documentation and to make it a priority in the software development process. By starting
+          with the needs of the reader and focusing on clear and concise explanations, we can create documentation that
+          is easy to understand and use. This will not only benefit the developers who are working on the code, but also
+          end users and future developers who may need to modify or maintain the code in the future.
+        </p>
+        <p>Some examples of things that may not be immediately apparent from reading the code include:</p>
+        <ul>
+          <li>
+            <b>The overall architecture and design of the code</b>: Code can often be organized in complex and
+            hierarchical ways, and it can be difficult to understand the big picture just by reading individual lines of
+            code. Documentation can help to explain the overall structure and design of the code, and can provide
+            context for how the different parts of the code fit together.
+          </li>
+          <li>
+            <b>The intended use of the code</b>: Code can often be used in a variety of different ways, and it's not
+            always clear how it is intended to be used just by reading the code. Documentation can help to provide
+            examples of how the code can be used, as well as any limitations or constraints that need to be considered.
+          </li>
+          <li>
+            <b>The reasoning behind certain code decisions</b>: Code can often be written in a variety of different ways
+            to solve the same problem, and it's not always clear why a particular approach was chosen just by reading
+            the code. Documentation can help to explain the reasoning behind certain code decisions, and can provide
+            context for why certain approaches were chosen over others.
+          </li>
+          <li>
+            <b>Known issues or potential problems</b>: Code is not always perfect, and there may be known issues or
+            potential problems that are not immediately apparent just by reading the code. Documentation can help to
+            identify and document these issues, and can provide guidance on how to address them.
+          </li>
+        </ul>
+        <p>
+          Overall, documentation is often necessary to provide a full understanding of the code, and to help developers
+          to use and modify it effectively. By including information about the overall architecture and design of the
+          code, the intended use of the code, the reasoning behind certain code decisions, and known issues or potential
+          problems, developers can create documentation that is comprehensive and useful.
+        </p>
+      </details>
+
+      <details>
+        <summary class="mt-5 cursor-pointer">What kind of documentation should I write?</summary>
+
+        <ul class="mt-2">
+          <li>
+            <b>Setup guide and codebase structure</b>: Code documentation is generally most useful for larger, more
+            complex software systems, where it can help to provide a high-level overview of the overall design and
+            organization of the codebase. It can also be helpful for new developers joining a project, as it can provide
+            them with context and background information about the codebase.
+          </li>
+          <li>
+            <b>ADR (Architecture Decision Record)</b>: An ADR (Architecture Decision Record) is a document that records
+            a decision made about the architecture or design of a software system. It typically includes information
+            about the problem being addressed, the options considered, and the decision made, as well as the rationale
+            behind the decision. ADRs are often used in agile development processes to help track and document decisions
+            made about the design and architecture of a software system.
+          </li>
+          <li>
+            <b>RFC (Request for Comments)</b>: An RFC (Request for Comments) is a document that outlines a proposal or
+            change to a software system, and solicits feedback and comments from the broader community of developers
+            working on the project. An RFC typically includes a detailed description of the proposed change, as well as
+            the benefits and potential drawbacks of the proposal. RFCs are often used in open source projects to
+            encourage collaboration and open discussion about proposed changes to the codebase.
+          </li>
+        </ul>
+      </details>
+    </section>
+
+    <main class="prose prose-neutral mt-10 max-w-full dark:prose-invert">
+      <h2>The missing link between code and documentation</h2>
+      <p>
+        The missing link between code and documentation is often a lack of integration between the two. When code and
+        documentation are not integrated, it can be easy for them to drift apart quickly as the code changes and
+        evolves.
+        <br />
+        Difficulty in keeping documentation in sync with the code: Without an automated process for keeping
+        documentation in sync with the code, it can be easy for the two to drift apart.
+        <br />
+        To address these issues and ensure that developers see the value in reading documentation, it's important to
+        create documentation that is well-organized, easy to find, and easy to understand. This can include linking the
+        documentation directly to the code, providing clear and concise explanations, and including examples and other
+        supporting materials to help make the documentation more useful and approachable. By making the documentation
+        more visible and accessible, developers are more likely to see the value in reading it and will be more likely
+        to use it to help them understand the code.
+      </p>
+    </main>
+
+    <section class="pt-10 text-center">
+      <h2 class="text-2xl font-bold">Editor Support</h2>
+      <div class="my-16 flex justify-around">
+        <a href="vscode.html" class="flex flex-col items-center gap-3">
+          <img src="assets/vscode.svg" alt="Visual Studio Code Logo" width="75" />
+          <span>VS Code</span>
+        </a>
+        <a href="jetbrains.html" class="flex flex-col items-center gap-3">
+          <img src="assets/IntelliJ_IDEA_icon.svg" alt="Intellij IDEA Logo" width="75" />
+          <span>Intellij IDEA</span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="border-t border-solid border-white/[.1] py-10 text-center dark:text-white/[.5]">
+      <p>
+        Copyright © 2023 by anverse ::
+        <a href="imprint.html" class="underline">Imprint</a>
+      </p>
+    </footer>
   </body>
 </html>
